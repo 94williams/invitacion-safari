@@ -1,87 +1,31 @@
-# Invitación Toy Story — 2 años de Aldo Aldair
+# Mi pequeño safari · Aldo Aldair
 
-Esta versión fue rehecha con una dirección visual mucho más cercana a la **idea de Toy Story**,
-sin copiar logos oficiales de manera literal.
+Invitación digital para los 2 años de Aldo Aldair. Copia independiente de `94williams/invitacion-aldo-aldair`, con el historial original y un diseño safari nuevo.
 
-## Qué cambió
+**Fecha:** domingo 25 de octubre de 2026, 12:00 p. m. (Ciudad de México, UTC−06:00). **Sede:** Parque de los Coyotes, Palapa 6. Contactos y enlaces conservados del original.
 
-- portada inspirada en **la habitación de Andy**;
-- letras estilo juguete con **amarillo + azul + sombra roja**;
-- paleta visual mucho más reconocible;
-- tipografías nuevas: **Bungee + Luckiest Guy + Nunito**;
-- iconos reemplazados por **SVGs propios** (cohete, sombrero, estrella sheriff, bloques, pastel, mapa, regalos, calendario, WhatsApp);
-- animación de apertura tipo **caja de juguetes**;
-- cohete **realmente funcional** con movimiento basado en el scroll;
-- estrellas que aparecen durante el desplazamiento;
-- galería tipo pared con fotografías estilo Polaroid;
-- mantiene cuenta regresiva, calendario, ubicación, WhatsApp y compartir.
+## Diseño
 
-## Personalización rápida
+Ilustración original en acuarela de la sabana africana, fotografías de elefantes, jirafas y un león; marfil, verde bosque, oliva y oro mate. Cormorant Garamond y DM Sans, alojadas localmente. Sin iconos SVG ni dependencias de JavaScript. Los animales son propios de la temática de sabana africana; no se presentan como especies endémicas de México.
 
-Abre `script.js` y cambia únicamente el bloque `CONFIG`.
+Cuenta regresiva con zona horaria explícita; descarga de calendario `.ics`; ubicación en Google Maps; galería ampliable con teclado y Escape; compartir; confirmación por WhatsApp con ambos anfitriones; animaciones que respetan movimiento reducido. La invitación permanece legible sin JavaScript. Los efectos de apertura, personajes y música de la temática anterior se retiraron del diseño nuevo.
 
-```js
-const CONFIG = {
-  nombre: "Aldo Aldair",
-  nombreInicio: "Aldo Bustos",
-  fechaEvento: "2026-10-25T12:00:00",
-  fechaTexto: "Domingo · 25 de octubre · 2026",
-  fechaDetalle: "Domingo 25 de octubre de 2026",
-  horaTexto: "12:00 p. m.",
-  lugar: {
-    nombre: "Nombre del salón",
-    direccion: "Dirección completa",
-    maps: "URL de Google Maps"
-  },
-  rsvpEndpoint: "",
-  whatsappContacts: [
-    { id: "edmundo", name: "Edmundo Bustos", phone: "525522995162" },
-    { id: "ana-karen", name: "Ana Karen Muñoz", phone: "525537365974" }
-  ]
-};
-```
+## Uso y personalización
 
-After deploying the Apps Script below, paste its `/exec` URL into `rsvpEndpoint`.
+Sitio estático: no requiere instalación ni compilación. Abre `index.html` o sirve la carpeta con un servidor HTTP. Para publicarlo en GitHub Pages, usa la rama `main` y la carpeta `/ (root)`.
 
-`nombreInicio` se muestra únicamente en la pantalla de apertura. `nombre` se usa en el resto de la invitación, el calendario, WhatsApp y la función de compartir.
+La lógica está en `script.js`, el contenido visible en `index.html` y el diseño en `styles.css`. Para otro festejo, actualiza `CONFIG` y las menciones visibles en HTML (nombre, edad, fecha, horarios, sede y contactos), además de los metadatos de compartir. La fecha ISO incluye `-06:00` para que el calendario y la cuenta regresiva coincidan en cualquier país.
 
-## Música
+Los archivos de imagen y de fuentes se encuentran dentro del repositorio. `assets/safari/SOURCES.md` documenta créditos, licencias y generación de la ilustración.
 
-La invitación reproduce `assets/yo-soy-tu-amigo-fiel.mp3` al pulsar «Abrir invitación». El botón flotante permite pausarlo o reanudarlo. Si el navegador bloquea el inicio, el invitado puede volver a intentarlo con el botón de música.
+## Confirmaciones
 
-```html
-<audio id="bgMusic" src="assets/yo-soy-tu-amigo-fiel.mp3" loop preload="none"></audio>
-```
+Se conservó el endpoint de Apps Script del original porque la copia usa por ahora el mismo festejo. **Ambas invitaciones comparten el registro de asistencia.** No se creó otra hoja de cálculo. Se incluye `GoogleAppsScript.gs` como código de referencia; no se modificó la implementación remota.
 
-## Calendario
+El formulario abre WhatsApp durante el clic y guarda el registro adicional de forma asíncrona. Nunca afirma que el mensaje fue enviado: el invitado debe enviarlo en WhatsApp. Si el registro adicional falla, el mensaje preparado sigue disponible. No se enviaron mensajes ni confirmaciones reales durante las pruebas.
 
-El botón «Descargar evento para calendario» descarga un archivo `.ics` con la fecha, hora, ubicación y duración de la fiesta. El invitado puede abrirlo con su aplicación de calendario preferida y confirmar allí que desea agregar el evento.
+Para un festejo nuevo, implementa `GoogleAppsScript.gs` en una hoja distinta y sustituye `CONFIG.rsvpEndpoint`, o déjalo vacío para usar solamente WhatsApp. El origen permitido por el backend es `https://94williams.github.io`.
 
-## Confirmaciones compartidas en Google Sheets
+## Créditos
 
-El formulario ofrece dos botones de WhatsApp. Antes de abrir el chat, guarda una fila por familia en Google Sheets; si el mismo nombre confirma otra vez, actualiza esa fila. La pestaña `Resumen` calcula las familias y personas confirmadas.
-
-1. Crea una hoja de cálculo privada en Google Sheets.
-2. Desde la hoja, abre **Extensiones > Apps Script** y copia el contenido de `GoogleAppsScript.gs` en el editor.
-3. En Apps Script, selecciona **Implementar > Nueva implementación > Aplicación web**. Elige ejecutar como tú y permite el acceso a cualquiera para que los invitados puedan confirmar. Implementa y copia la URL de la aplicación web que termina en `/exec`.
-4. En `script.js`, pega esa URL en `CONFIG.rsvpEndpoint`. Sin una URL válida, el formulario avisa y no registra ni abre WhatsApp.
-5. Mantén la hoja privada: los invitados envían confirmaciones, pero no necesitan acceso a la hoja.
-
-Cuando actualices `GoogleAppsScript.gs`, crea una nueva versión de la implementación desde Apps Script para que los cambios del servidor queden activos.
-
-La aplicación usa los números configurados en `CONFIG.whatsappContacts` (México, prefijo `52`). Cambia ahí los contactos si fuera necesario. La URL de Apps Script es pública para recibir envíos; no compartas la URL de la hoja.
-
-## Archivos
-
-- `index.html`
-- `styles.css`
-- `script.js`
-- `GoogleAppsScript.gs` (backend para guardar y resumir confirmaciones)
-- `assets/` con fotos y SVGs
-
-## Recomendación
-
-Si después quieres, el siguiente paso ideal sería:
-- colocar la **fecha y sede reales**,
-- añadir una canción,
-- y publicar el sitio en **Netlify o GitHub Pages**.
+Fotografías de animales obtenidas de Unsplash bajo su licencia. Fuentes de Google Fonts bajo SIL Open Font License, con copias de las licencias incluidas. Ilustración creada con la herramienta integrada ImageGen para este proyecto.

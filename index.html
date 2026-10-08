@@ -3,329 +3,117 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#66c7f0">
-  <meta name="description" content="Invitación de Toy Story para los 2 años de Aldo Aldair">
+  <meta name="theme-color" content="#253c30">
+  <meta name="description" content="Un safari de sonrisas para celebrar los 2 años de Aldo Aldair. Domingo 25 de octubre de 2026.">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="es_MX">
-  <meta property="og:title" content="Mis 2 años · Aldo Aldair">
-  <meta property="og:description" content="¡Acompáñame a celebrar una aventura muy especial!">
-  <meta property="og:url" content="https://94williams.github.io/invitacion-aldo-aldair/">
-  <meta property="og:image" content="https://94williams.github.io/invitacion-aldo-aldair/assets/space-aldo.png">
-  <meta property="og:image:alt" content="Invitación de cumpleaños de Aldo Aldair">
+  <meta property="og:title" content="El safari de Aldo Aldair · Mis 2 años">
+  <meta property="og:description" content="Una pequeña gran aventura. Acompáñame a celebrar el 25 de octubre.">
+  <meta property="og:url" content="https://94williams.github.io/invitacion-safari/">
+  <meta property="og:image" content="https://94williams.github.io/invitacion-safari/assets/safari/sabana.jpg">
+  <meta property="og:image:alt" content="Animales de la sabana africana pintados en acuarela">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="canonical" href="https://94williams.github.io/invitacion-aldo-aldair/">
-  <link rel="icon" href="assets/marciano-head-removebg.png" type="image/png">
-  <title>Mis 2 años · Aldo Aldair</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bungee:wght@400&family=Luckiest+Guy&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=gallery-size-55">
+  <link rel="canonical" href="https://94williams.github.io/invitacion-safari/">
+  <link rel="icon" href="assets/safari/favicon.png" type="image/png">
+  <link rel="preload" href="assets/safari/sabana.webp" as="image" fetchpriority="high">
+  <link rel="stylesheet" href="assets/safari/fonts.css">
+  <link rel="stylesheet" href="styles.css?v=safari-1">
+  <title>El safari de Aldo Aldair · Mis 2 años</title>
 </head>
-<body class="locked">
-  <div id="progressBar" class="progress-bar"></div>
-  <div id="starTrail" class="star-trail" aria-hidden="true"></div>
+<body>
+  <a class="skip-link" href="#mainContent">Ir a la invitación</a>
+  <div id="progressBar" aria-hidden="true"></div>
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
-
-  <section id="welcome" class="welcome" aria-labelledby="welcomeTitle">
-    <div class="andy-clouds"></div>
-
-    <div class="welcome-card">
-      <div class="toybox-wrap">
-        <div class="toybox-lid" aria-hidden="true">
-          <span class="toybox-lid-panel"></span>
-        </div>
-        <div class="toybox-base">
-          <div class="toybox-depth" aria-hidden="true"></div>
-          <div class="toybox-front" aria-hidden="true">
-            <span class="chest-strap strap-left"></span>
-            <span class="chest-strap strap-right"></span>
-            <span class="toybox-plaque">TOYS</span>
-            <span class="toybox-lock"></span>
-          </div>
-        </div>
-        <div class="toybox-items" aria-label="Juguetes saliendo del baúl">
-          <img src="assets/Jessy.png" alt="" class="box-character jessie" aria-hidden="true">
-          <img src="assets/Marcianos.png" alt="" class="box-character aliens" aria-hidden="true">
-          <img src="assets/REX.png" alt="" class="box-character rex" aria-hidden="true">
-          <img src="assets/Woody.png" alt="" class="box-character woody" aria-hidden="true">
-          <img src="assets/buzz-removebg-preview.png" alt="" class="box-character buzz" aria-hidden="true">
-        </div>
+  <header class="cover" id="inicio">
+    <nav class="topbar" aria-label="Navegación principal">
+      <a class="wordmark" href="#inicio">A<span class="wordmark-dot">·</span>A <span class="wordmark-caption">MI PEQUEÑO SAFARI</span></a>
+      <button class="share-button" id="shareBtn" type="button">Compartir <span aria-hidden="true">↗</span></button>
+    </nav>
+    <div class="cover-frame">
+      <div class="cover-copy">
+        <p class="eyebrow">UNA INVITACIÓN A LO EXTRAORDINARIO</p>
+        <p class="cover-pretitle">Bienvenido a mi</p>
+        <h1>pequeño <em>safari</em></h1>
+        <div class="cover-name">Aldo Aldair</div>
+        <p class="cover-subtitle">Dos años explorando el mundo.<br>Una gran aventura por celebrar.</p>
+        <div class="cover-date"><span>25 OCTUBRE 2026</span><span class="date-divider" aria-hidden="true"></span><span>12:00 P. M.</span></div>
+        <a class="button button-dark" id="openBtn" href="#mainContent">Descubrir la invitación <span aria-hidden="true">↓</span></a>
       </div>
-
-      <div class="welcome-sign">
-        <p class="small-kicker">UNA AVENTURA ESTÁ POR COMENZAR</p>
-        <div class="top-line">
-          <span class="hero-word">MIS</span>
-          <span class="big-two">2</span>
-          <span class="hero-word">AÑOS</span>
-        </div>
-          <div class="welcome-name-plaque">
-            <h1 id="welcomeTitle" class="name-logo">
-              <span>Aldo</span>
-              <span>Bustos</span>
-            </h1>
-            <p class="sub-invite">¡Te invito a celebrar conmigo!</p>
-          </div>
-      </div>
-
-      <button id="openBtn" class="btn btn-primary btn-open" type="button">
-        Abrir invitación
-      </button>
-      <p class="welcome-note">Toca para abrir la caja de juguetes</p>
+      <img class="cover-art" src="assets/safari/sabana.webp" alt="Elefantes, jirafas, cebras y un león entre acacias y pastos dorados, en acuarela" width="1536" height="1024" fetchpriority="high" decoding="async">
+      <p class="cover-edition">UN DÍA PARA ATESORAR</p>
+      <div class="birthday-seal" aria-label="Mis 2 años"><span>MIS</span><strong>2</strong><span>AÑOS</span></div>
     </div>
-
-    <div class="space-warp" aria-hidden="true"></div>
-    <div id="burst" class="burst" aria-hidden="true"></div>
-  </section>
-
-  <div class="floating-actions" inert aria-hidden="true">
-    <button id="shareBtn" class="fab" type="button" aria-label="Compartir">↗</button>
-    <button id="musicBtn" class="fab" type="button" aria-label="Reproducir música" aria-pressed="false">♫</button>
-  </div>
-
-  <main id="mainContent" tabindex="-1" inert>
-    <header class="hero">
-      <div class="cloud-layer layer-1"></div>
-      <div class="cloud-layer layer-2"></div>
-
-      <div class="hero-inner">
-        <div class="hero-sign reveal">
-          <div class="hero-copy">
-            <div class="hero-top">
-              <span class="hero-word">MIS</span>
-              <span class="hero-year">2</span>
-              <span class="hero-word">AÑOS</span>
-            </div>
-            <h1 class="name-logo hero-logo">
-              <span id="heroName1">Aldo</span>
-              <span id="heroName2">Aldair</span>
-            </h1>
-            <p class="hero-sub">¡Te invito a celebrar conmigo!</p>
-          </div>
-          <img class="hero-buzz" src="assets/buzz-removebg-preview.png" alt="Buzz Lightyear" width="419" height="530" loading="lazy" decoding="async">
+    <div class="cover-footer"><span>ESPÍRITU SALVAJE, CORAZÓN LLENO DE AMOR</span><span>CDMX · 2026</span></div>
+  </header>
+  <main id="mainContent" tabindex="-1">
+    <section class="story section" id="historia" aria-labelledby="storyTitle">
+      <div class="story-portrait reveal">
+        <div class="portrait-arch"><img src="assets/Aldo-Gorro.jpeg" alt="Aldo con gorro" width="960" height="1280" loading="lazy" decoding="async"></div>
+        <span class="portrait-caption">Nuestro pequeño explorador</span>
+        <div class="portrait-stamp" aria-hidden="true">EL MUNDO<br>ES TUYO</div>
+      </div>
+      <div class="story-copy reveal">
+        <p class="eyebrow">EL EXPLORADOR DE ESTA HISTORIA</p>
+        <h2 id="storyTitle">Pequeños pasos.<br><em>Grandes aventuras.</em></h2>
+        <div class="gold-rule" aria-hidden="true"></div>
+        <p>Hace dos años comenzó nuestra aventura más bonita. Desde entonces, cada sonrisa, cada descubrimiento y cada abrazo han llenado nuestro mundo de alegría.</p>
+        <p>Hoy, <strong>Aldo Aldair</strong> cumple <strong>2 años</strong> y queremos celebrarlo contigo, entre amigos, risas y toda la magia de un safari.</p>
+        <p class="handwritten">La aventura es más bonita si vienes tú.</p>
+      </div>
+    </section>
+    <section class="countdown-section" aria-labelledby="countdownTitle">
+      <div class="countdown-inner reveal">
+        <p class="eyebrow">RESERVA UN DÍA PARA LA AVENTURA</p>
+        <h2 id="countdownTitle">Nos vemos bajo <em>el mismo sol.</em></h2>
+        <p class="event-date">Domingo, 25 de octubre de 2026 <span>·</span> 12:00 p. m.</p>
+        <div id="countdown" class="countdown" role="group" aria-label="Tiempo restante para la fiesta">
+          <div><strong id="days">00</strong><span>DÍAS</span></div><div><strong id="hours">00</strong><span>HORAS</span></div><div><strong id="minutes">00</strong><span>MINUTOS</span></div><div><strong id="seconds">00</strong><span>SEGUNDOS</span></div>
         </div>
-
-        <div class="hero-showcase reveal">
-          <img class="space-alien alien-above-left" src="assets/marciano-head-removebg.png" alt="" aria-hidden="true" decoding="async" width="534" height="408">
-          <img class="space-alien alien-above-right" src="assets/marciano-head-removebg.png" alt="" aria-hidden="true" decoding="async" width="534" height="408">
-          <img class="space-alien alien-left" src="assets/marciano-head-removebg.png" alt="" aria-hidden="true" decoding="async" width="534" height="408">
-          <img class="space-alien alien-left-lower" src="assets/marciano-head-removebg.png" alt="" aria-hidden="true" decoding="async" width="534" height="408">
-          <img class="space-alien alien-right" src="assets/marciano-head-removebg.png" alt="" aria-hidden="true" decoding="async" width="534" height="408">
-          <img class="space-alien alien-right-lower" src="assets/marciano-head-removebg.png" alt="" aria-hidden="true" decoding="async" width="534" height="408">
-          <div class="spacecraft-frame">
-            <span class="spacecraft-hull-depth" aria-hidden="true"></span>
-            <span class="spacecraft-nose" aria-hidden="true"></span>
-            <span class="spacecraft-wing wing-left" aria-hidden="true"></span>
-            <span class="spacecraft-wing wing-right" aria-hidden="true"></span>
-            <span class="spacecraft-engine engine-left" aria-hidden="true"></span>
-            <span class="spacecraft-engine engine-right" aria-hidden="true"></span>
-            <span class="spacecraft-vent vent-left" aria-hidden="true"></span>
-            <span class="spacecraft-vent vent-right" aria-hidden="true"></span>
-            <span class="spacecraft-controls" aria-hidden="true"><i></i><i></i><i></i></span>
-            <span class="spacecraft-badge" aria-hidden="true">A-02</span>
-            <div class="hero-photo-frame">
-              <img src="assets/space-aldo.webp?v=2" alt="Aldo Aldair dentro de una nave espacial" width="1122" height="1402" fetchpriority="high" decoding="async">
-            </div>
-          </div>
-
-        </div>
-
-        <a href="#story" class="btn btn-primary reveal">Comenzar aventura</a>
-      </div>
-      <div class="wood-floor"></div>
-    </header>
-
-    <section id="story" class="section section-paper">
-      <div class="content-card reveal">
-        <img class="section-badge" src="assets/pelota.png" alt="Pelota amarilla con estrella roja" width="96" height="96" loading="lazy" decoding="async">
-        <h2 class="section-title">¡Ya cumplo 2!</h2>
-        <img class="story-slinky" src="assets/Slinky.png" alt="Slinky, el perro resorte" width="667" height="700" loading="lazy" decoding="async">
-        <p class="lead">
-          Hace 2 años comenzó nuestra mejor aventura. Dos años de sonrisas,
-          travesuras, descubrimientos y muchísimo amor.
-          Hoy <strong>Aldo Aldair</strong> está listo para celebrar una nueva misión:
-          <strong>¡cumplir 2!</strong>
-        </p>
+        <p id="countdownStatus" class="countdown-status" role="status" hidden>¡El día de nuestra aventura ha llegado!</p>
+        <button id="calendarBtn" type="button" class="button button-outline">Guardar la fecha <span aria-hidden="true">↗</span></button>
       </div>
     </section>
-
-    <section id="countdownSection" class="section section-sky">
-      <img class="countdown-woody" src="assets/Woody.png" alt="" aria-hidden="true" width="289" height="1024" loading="lazy" decoding="async">
-      <div class="section-header reveal">
-        <p class="kicker">La cuenta regresiva</p>
-        <h2>¡La aventura está por comenzar!</h2>
-      </div>
-
-      <div id="countdown" class="countdown reveal" aria-label="Cuenta regresiva">
-        <div class="count-box"><strong id="days">00</strong><span>Días</span></div>
-        <div class="count-box"><strong id="hours">00</strong><span>Horas</span></div>
-        <div class="count-box"><strong id="minutes">00</strong><span>Minutos</span></div>
-        <div class="count-box"><strong id="seconds">00</strong><span>Segundos</span></div>
-      </div>
-      <p id="countdownStatus" class="countdown-status" role="status" hidden>¡La aventura ya comenzó!</p>
-
-      <div class="date-chip reveal">
-        <span id="eventDateText">Domingo · 25 de octubre · 2026</span>
-        <strong id="eventTimeText">12:00 p. m.</strong>
-      </div>
-
-      <button id="calendarBtn" type="button" class="btn btn-secondary reveal">Descargar evento para calendario</button>
-    </section>
-
-    <section id="plan" class="section section-western">
-      <div class="section-header reveal">
-        <p class="kicker">Plan de fiesta</p>
-        <h2>Tenemos una gran aventura preparada</h2>
-      </div>
-
-      <div class="plan-grid">
-        <article class="plan-card reveal">
-          <img src="assets/REX.png" alt="Rex, el dinosaurio de juguete" class="icon-real plan-rex" width="359" height="393" loading="lazy" decoding="async">
-          <h3>1. Llegada</h3>
-          <strong id="arrivalTime">12:00 p. m.</strong>
-          <p>Nos reunimos para comenzar la diversión.</p>
-        </article>
-        <article class="plan-card reveal">
-          <img src="assets/Ham-removebg-preview.png" alt="Ham, el cerdito de juguete" class="icon-real plan-ham" width="600" height="430" loading="lazy" decoding="async">
-          <h3>2. Comida y juegos</h3>
-          <strong id="foodTime">2:00 p. m.</strong>
-          <p>Habrá comida, juegos y música</p>
-        </article>
-        <article class="plan-card reveal">
-          <img src="assets/CARA_DE_PAPA.png" alt="Cara de Papa saludando" class="icon-real plan-potato" width="607" height="408" loading="lazy" decoding="async">
-          <h3>3. Pastel y piñata</h3>
-          <strong id="cakeTime">4:00 p. m.</strong>
-          <p>Disfrutaremos del pastel y la piñata.</p>
-        </article>
+    <section class="section itinerary" id="aventura" aria-labelledby="planTitle">
+      <div class="section-heading reveal"><p class="eyebrow">NUESTRA RUTA DEL DÍA</p><h2 id="planTitle">Un safari de <em>momentos felices.</em></h2><p>Todo está preparado para una celebración inolvidable.</p></div>
+      <div class="itinerary-grid">
+        <article class="route-card reveal"><div class="route-image"><img src="assets/safari/elefantes.jpg" alt="Familia de elefantes en la sabana africana" width="1400" height="933" loading="lazy" decoding="async"><span class="route-number">01</span></div><div class="route-copy"><p class="eyebrow">12:00 P. M.</p><h3>El encuentro</h3><p>Reunimos a nuestra manada para dar la bienvenida a un día muy especial.</p></div></article>
+        <article class="route-card reveal"><div class="route-image"><img src="assets/safari/jirafas.jpg" alt="Jirafas en los pastos de la reserva Maasai Mara, Kenia" width="1000" height="667" loading="lazy" decoding="async"><span class="route-number">02</span></div><div class="route-copy"><p class="eyebrow">2:00 P. M.</p><h3>Sabores y aventuras</h3><p>Una pausa para compartir la comida, jugar y llenar la tarde de sonrisas.</p></div></article>
+        <article class="route-card reveal"><div class="route-image"><img src="assets/safari/leon.jpg" alt="León descansando entre los pastos de Samburu, Kenia" width="1000" height="667" loading="lazy" decoding="async"><span class="route-number">03</span></div><div class="route-copy"><p class="eyebrow">4:00 P. M.</p><h3>Un deseo muy salvaje</h3><p>Llegó el momento del pastel, las velitas y la piñata. ¡Que comience la fiesta!</p></div></article>
       </div>
     </section>
-
-    <section id="venueSection" class="section section-map">
-      <article class="location-card reveal">
-        <img src="assets/pin.svg?v=3d-2" alt="" class="map-icon">
-        <div class="location-copy">
-          <p class="kicker">Lugar de la fiesta</p>
-          <h2 id="venueName">Parque de los coyotes Palapa 6</h2>
-          <p id="venueAddress">Calzada De La Virgen, Rosa María Sequeira, Coapa, Ex-Ejido de San Pablo Tepetlapa, 04840 Ciudad de México, CDMX</p>
-        </div>
-        <a id="mapsBtn" href="#" target="_blank" rel="noopener" class="btn btn-primary">Ver ubicación</a>
-      </article>
+    <section class="venue-section" id="lugar" aria-labelledby="venueTitle">
+      <div class="venue-art" aria-hidden="true"><img src="assets/safari/sabana.webp" alt="" width="1536" height="1024" loading="lazy" decoding="async"></div>
+      <div class="venue-card reveal"><p class="eyebrow">COORDENADAS DE NUESTRA AVENTURA</p><h2 id="venueTitle">El punto de <em>encuentro.</em></h2><p class="venue-name">Parque de los Coyotes</p><p class="venue-palapa">PALAPA 6 · CIUDAD DE MÉXICO</p><div class="gold-rule" aria-hidden="true"></div><address>Calzada de la Virgen, Rosa María Sequeira, Coapa, Ex-Ejido de San Pablo Tepetlapa, 04840 Ciudad de México, CDMX.</address><a id="mapsBtn" class="button button-dark" href="https://maps.app.goo.gl/89LAJ5LPcYw8SaTS9" target="_blank" rel="noopener noreferrer">Cómo llegar <span aria-hidden="true">↗</span></a><span class="venue-note">Nos vemos el domingo a las 12:00 p. m.</span></div>
     </section>
-
-    <section id="spaceSection" class="section section-space">
-      <div class="section-header reveal">
-        <p class="kicker light">Hasta el infinito…</p>
-        <h2 class="light">y más allá</h2>
-      </div>
-
-      <div class="space-copy reveal">
-        Una gran aventura de juguetes, botas, estrellas y sonrisas.
-      </div>
-
-      <div class="shooting-star" aria-hidden="true"></div>
-
-      <div id="rocketTrack" class="rocket-track" aria-hidden="true">
-        <div id="scrollRocket" class="scroll-rocket">
-          <img src="assets/rocket.svg?v=3d-2" alt="">
-          <div class="rocket-fire"></div>
-        </div>
-      </div>
+    <section class="section memories" id="recuerdos" aria-labelledby="galleryTitle">
+      <div class="section-heading reveal"><p class="eyebrow">MI DIARIO DE EXPLORADOR</p><h2 id="galleryTitle">Dos años de <em>descubrimientos.</em></h2><p>Los pequeños momentos que se vuelven nuestros grandes tesoros.</p></div>
+      <div class="gallery">
+        <button class="memory reveal" type="button" data-caption="Donde comenzó la aventura"><img src="assets/Aldo-recien-nacido.webp" alt="Aldo recién nacido" width="1200" height="1600" loading="lazy" decoding="async"><span><small>CAPÍTULO 01</small>Donde todo comenzó</span></button>
+        <button class="memory reveal" type="button" data-caption="Un mundo por descubrir"><img src="assets/Aldo-Risa-avi%C3%B3n.jpeg" alt="Aldo riendo junto a un avión" width="960" height="1280" loading="lazy" decoding="async"><span><small>CAPÍTULO 02</small>Un mundo por descubrir</span></button>
+        <button class="memory reveal" type="button" data-caption="Nuestra sonrisa favorita"><img src="assets/Aldo-Gorro.jpeg" alt="Aldo con gorro" width="960" height="1280" loading="lazy" decoding="async"><span><small>CAPÍTULO 03</small>Nuestra sonrisa favorita</span></button>
+        <button class="memory reveal" type="button" data-caption="Siempre listo para explorar"><img src="assets/Aldo.lentes.jpeg" alt="Aldo con lentes" width="960" height="1280" loading="lazy" decoding="async"><span><small>CAPÍTULO 04</small>Listo para explorar</span></button>
+        <button class="memory reveal" type="button" data-caption="La aventura continúa"><img src="assets/Adldo-Recien-ba%C3%B1ado.jpeg" alt="Aldo recién bañado" width="960" height="1280" loading="lazy" decoding="async"><span><small>CAPÍTULO 05</small>La aventura continúa</span></button>
+      </div><p class="gallery-hint">Toca una fotografía para verla de cerca.</p>
     </section>
-
-    <section id="gallery" class="section section-gallery">
-      <div class="section-header reveal">
-        <p class="kicker">Nuestros momentos</p>
-        <h2>Pequeñas aventuras, grandes recuerdos</h2>
-      </div>
-
-      <div class="gallery-wall">
-        <figure class="polaroid reveal tilt-left"><img src="assets/Aldo-recien-nacido.webp" alt="Aldo recién nacido" width="1200" height="1600" loading="lazy" decoding="async"><figcaption>Aldo</figcaption></figure>
-        <figure class="polaroid reveal tilt-right"><img src="assets/Aldo-Risa-avi%C3%B3n.jpeg" alt="Aldo riendo junto a un avión" loading="lazy" decoding="async"><figcaption>Pequeño explorador</figcaption></figure>
-        <figure class="polaroid reveal tilt-left"><img src="assets/Aldo-Gorro.jpeg" alt="Aldo con gorro" loading="lazy" decoding="async"><figcaption>Gran sonrisa</figcaption></figure>
-        <figure class="polaroid reveal tilt-right"><img src="assets/Aldo.lentes.jpeg" alt="Aldo con lentes" loading="lazy" decoding="async"><figcaption>Dos años de amor</figcaption></figure>
-        <figure class="polaroid reveal tilt-left wide"><img src="assets/Adldo-Recien-bañado.jpeg" alt="Aldo recién bañado" loading="lazy" decoding="async"><figcaption>Rumbo a otra aventura</figcaption></figure>
-      </div>
-    </section>
-
-    <section id="details" class="section section-paper">
-      <div class="section-header reveal">
-        <p class="kicker">Detalles importantes</p>
-        <h2>Todo listo para la fiesta</h2>
-      </div>
-
-      <div class="detail-grid">
-        <article class="detail-card reveal">
-          <img src="assets/Jessy.png" alt="Jessie, vaquera de Toy Story" class="detail-icon dress-jessie" width="494" height="505" loading="lazy" decoding="async">
-          <h3>Código de vestimenta</h3>
-          <p id="dressCode">Ven cómodo y listo para la aventura. Estilo casual o inspirado en juguetes.</p>
-        </article>
-
-        <article class="detail-card reveal">
-          <img src="assets/Juguetes feliz.png" alt="Juguetes celebrando felices" class="detail-icon event-toys" width="579" height="680" loading="lazy" decoding="async">
-          <h3>Evento</h3>
-          <p><strong id="detailDate">Domingo 25 de octubre de 2026</strong><br><span id="detailTime">12:00 p. m.</span></p>
-        </article>
-
-        <article class="detail-card reveal">
-          <img src="assets/Marcianos.png" alt="Los marcianos verdes de Toy Story" class="detail-icon gift-aliens" width="728" height="343" loading="lazy" decoding="async">
-          <h3>Regalos</h3>
-          <p>Tu presencia es el mejor regalo, pero si deseas tener un detalle con Aldo Aldair, podrás hacerlo ese día en la fiesta.</p>
-        </article>
-      </div>
-    </section>
-
-    <section id="rsvp" class="section section-rsvp">
-      <div class="rsvp-card reveal">
-        <img src="assets/whatsapp.svg?v=3d-2" alt="" class="whatsapp-icon">
-        <div class="section-header">
-          <p class="kicker">Confirma tu asistencia</p>
-          <h2>Nos encantará verte en esta aventura</h2>
-        </div>
-
-        <form id="rsvpForm" class="rsvp-form">
-          <div class="form-honeypot" aria-hidden="true">
-            <label for="guestWebsite">Deja este campo vacío</label>
-            <input id="guestWebsite" name="website" type="text" tabindex="-1" autocomplete="off">
-          </div>
-
-          <label>
-            Nombre
-            <input id="guestName" name="guestName" type="text" placeholder="Tu nombre" autocomplete="name" maxlength="80" required>
-          </label>
-
-          <label>
-            Número de personas
-            <select id="guestCount" name="guestCount">
-              <option value="1">1 persona</option>
-              <option value="2">2 personas</option>
-              <option value="3">3 personas</option>
-              <option value="4">4 personas</option>
-              <option value="5">5 personas</option>
-              <option value="6">6 personas</option>
-            </select>
-          </label>
-
-          <div class="rsvp-actions">
-            <button type="submit" class="btn btn-whatsapp" data-contact="edmundo">Confirmar con Edmundo Bustos</button>
-            <button type="submit" class="btn btn-whatsapp" data-contact="ana-karen">Confirmar con Ana Karen Muñoz</button>
-          </div>
-        </form>
-      </div>
+    <section class="details-section" aria-labelledby="detailsTitle"><div class="section-heading reveal"><p class="eyebrow">EN TU MOCHILA DE EXPLORADOR</p><h2 id="detailsTitle">Los pequeños <em>detalles.</em></h2></div><div class="detail-grid">
+      <article class="detail reveal"><span class="detail-label">01 / QUÉ LLEVAR</span><h3>Comodidad y una sonrisa</h3><p>Ven cómodo y listo para la aventura. El estilo casual sigue siendo perfecto para disfrutar la fiesta.</p><div class="swatches" aria-label="Colores de nuestra temática safari"><span></span><span></span><span></span><span></span></div><small>Nuestra inspiración: arena, oliva y tierra.</small></article>
+      <article class="detail reveal"><span class="detail-label">02 / EL MEJOR REGALO</span><h3>Compartir este día</h3><p>Tu presencia es nuestro regalo favorito. Si deseas tener un detalle con Aldo Aldair, podrás entregarlo el día de la fiesta.</p><p class="detail-quote">Los mejores recuerdos<br>se viven en compañía.</p></article>
+    </div></section>
+    <section class="rsvp-section" id="rsvp" aria-labelledby="rsvpTitle">
+      <div class="rsvp-heading reveal"><p class="eyebrow">HAY UN LUGAR PARA TI EN NUESTRA MANADA</p><h2 id="rsvpTitle">¿Vienes a <em>la aventura?</em></h2><p>Nos encantará compartir este día contigo.<br>Confirma tu asistencia con nuestros anfitriones.</p></div>
+      <form id="rsvpForm" class="rsvp-form reveal">
+        <div class="honeypot" aria-hidden="true"><label for="guestWebsite">Deja este campo vacío</label><input id="guestWebsite" name="website" type="text" tabindex="-1" autocomplete="off"></div>
+        <label for="guestName">TU NOMBRE<input id="guestName" name="guestName" type="text" placeholder="Nombre y apellido" autocomplete="name" maxlength="80" required></label>
+        <label for="guestCount">¿CUÁNTOS NOS ACOMPAÑAN?<select id="guestCount" name="guestCount"><option value="1">1 persona</option><option value="2">2 personas</option><option value="3">3 personas</option><option value="4">4 personas</option><option value="5">5 personas</option><option value="6">6 personas</option></select></label>
+        <div class="rsvp-actions"><button class="button button-dark" type="submit" data-contact="edmundo">Confirmar con Edmundo Bustos <span aria-hidden="true">↗</span></button><button class="button button-light" type="submit" data-contact="ana-karen">Confirmar con Ana Karen Muñoz <span aria-hidden="true">↗</span></button></div>
+        <p class="rsvp-note">Se abrirá WhatsApp con tu mensaje preparado.<br>Envía el mensaje para completar tu confirmación.</p>
+        <p id="rsvpStatus" class="rsvp-status" role="status" aria-live="polite"></p>
+      </form>
     </section>
   </main>
-
-  <footer class="footer">
-    <div class="footer-stars">★ ★ ★</div>
-    <p>Con cariño, los padres de <strong>Aldo Aldair</strong></p>
-    <small>Te esperamos en esta aventura con alegría </small>
-    <p class="footer-service">
-      ¿Te gustaría contratar el servicio de invitaciones?
-      <a href="https://wa.me/5215537978056?text=Hola%2C%20me%20interesa%20contratar%20el%20servicio%20de%20invitaciones%20digitales." target="_blank" rel="noopener noreferrer">Para más información, comunícate al <strong>55 3797 8056</strong> por WhatsApp</a>
-    </p>
-  </footer>
-
-  <audio id="bgMusic" src="assets/yo-soy-tu-amigo-fiel.mp3" loop preload="none"></audio>
-
-  <script src="script.js?v=stability-58"></script>
+  <footer class="footer"><div class="footer-monogram">A<span>·</span>A</div><p>Con todo nuestro cariño,<br><strong>los padres de Aldo Aldair</strong></p><p class="footer-signature">Hasta nuestra próxima gran aventura.</p><div class="footer-bottom"><span>MI PEQUEÑO SAFARI · 25 OCTUBRE 2026</span><a href="https://wa.me/5215537978056?text=Hola%2C%20me%20interesa%20contratar%20el%20servicio%20de%20invitaciones%20digitales." target="_blank" rel="noopener noreferrer">¿Quieres una invitación así? · 55 3797 8056 <span aria-hidden="true">↗</span></a></div></footer>
+  <a id="stickyRsvp" class="sticky-rsvp" href="#rsvp" hidden>Confirmar asistencia <span aria-hidden="true">↗</span></a>
+  <dialog id="photoDialog" class="photo-dialog" aria-labelledby="photoCaption"><button class="dialog-close" type="button" aria-label="Cerrar fotografía">Cerrar <span aria-hidden="true">×</span></button><img id="photoLarge" src="assets/Aldo-Gorro.jpeg" alt=""><p id="photoCaption"></p></dialog>
+  <script src="script.js?v=safari-1" defer></script>
 </body>
 </html>
