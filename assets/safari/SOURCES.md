@@ -26,3 +26,8 @@ Prompt final usado:
 `palmera-abanico.webp`: ilustración original creada con ImageGen integrado; fondo transparente y exportación WebP de 600 × 640. Prompt: "One elegant African safari botanical decoration: a small group of two fan palm leaves with slender stems, gracefully opening diagonally upward to the right, one broad fan and one smaller fan. Delicate premium watercolor illustration, muted sage green, olive green and sandy golden edges, softly feathered translucent pigment, hand painted natural texture. Isolated on truly transparent alpha background. No text, no border, no shadow, no pot, no animals, no scenery, no graphic icons. Botanical leaves only; refined and airy, suitable for subtle faded edge ornaments on an ivory safari birthday invitation."
 
 `acacia.webp`: ilustración original creada con ImageGen integrado el 8 de octubre de 2026; fondo transparente, exportación WebP de 640 × 427. Prompt: "Create one isolated botanical branch of African savanna acacia foliage, delicate pinnate small oval leaflets, thin graceful twig curving diagonally from lower left to upper right. Premium hand-painted watercolor illustration, muted olive, sage and warm ochre, translucent pigment texture, natural botanical accuracy. Single unified branch occupying the image, no text, no border, no scene, no shadow, no pot, no animals. Truly transparent background with alpha, suitable as elegant edge decoration on an ivory safari birthday invitation website."
+
+
+## Acabados premium
+`papel-algodon.png`: textura raster procedural local de 192 × 192, sin SVG.
+`caveat.ttf`: fuente Caveat variable de Google Fonts, bajo SIL Open Font License; copia en `LICENSE-Caveat.txt`. Fuente y licencia: https://github.com/google/fonts/tree/main/ofl/caveat .
