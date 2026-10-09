@@ -138,6 +138,17 @@ function observeReveal() {
     element.style.setProperty("--reveal-delay", `${Math.min(siblings.indexOf(element), 3) * 90}ms`);
     observer.observe(element);
   });
+  const textObserver = new IntersectionObserver((entries) => entries.forEach((entry) => {
+    if (entry.isIntersecting) { entry.target.classList.add("text-visible"); textObserver.unobserve(entry.target); }
+  }), { threshold: 0.15, rootMargin: "0px 0px -20px 0px" });
+  document.querySelectorAll(".text-reveal, .text-sequence").forEach((element) => textObserver.observe(element));
+  document.addEventListener("focusin", (event) => {
+    const container = event.target.closest(".memory, .cover-copy, .rsvp-heading");
+    if (!container) return;
+    container.querySelectorAll(".text-reveal, .text-sequence").forEach((element) => {
+      element.classList.add("text-visible"); textObserver.unobserve(element);
+    });
+  });
   document.body.classList.add("js-motion");
   document.addEventListener("focusin", (event) => {
     const element = event.target.closest(".reveal");
