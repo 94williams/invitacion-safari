@@ -96,3 +96,10 @@ body:before{content:'';position:fixed;inset:0;z-index:40;pointer-events:none;bac
 .cover-sunset{z-index:1}
 .cover-sunset:before{content:'';position:absolute;width:clamp(88px,10vw,132px);aspect-ratio:1;left:72%;bottom:60%;transform:translateX(-50%);border-radius:50%;background:radial-gradient(circle at 45% 40%,#fff4c7d9 0%,#f3cf89bf 55%,#d9a35680 100%);border:1px solid #d1a5665c;box-shadow:0 0 34px 14px #efd09355,0 0 80px 34px #efd09326;opacity:.7;mask-image:linear-gradient(#000 60%,#000b 82%,#0003);pointer-events:none}
 @media(max-width:700px){.cover-sunset:before{width:88px;left:76%;bottom:60%;opacity:.66}}
+/* Luminous sun aligned to the event date, with atmospheric haze. */
+.cover-sunset:before{content:none}
+.cover-date{position:relative;isolation:isolate}
+.cover-sun{position:absolute;left:calc(50% + 215px);top:50%;width:106px;aspect-ratio:1;transform:translate(-50%,-50%);border-radius:50%;background:radial-gradient(circle,#fff9df 0%,#fff4c7 45%,#ffe8a9 65%,#efc274b3 73%,#e5b36355 78%,transparent 85%);box-shadow:0 0 26px 7px #f4cf854d,0 0 70px 25px #f4cf8526;opacity:.82;filter:blur(.6px);pointer-events:none;z-index:-1}
+.cover-sun:after{content:'';position:absolute;inset:-12%;border-radius:50%;background:linear-gradient(172deg,transparent 38%,#f1e3c57a 43%,transparent 49%,transparent 62%,#efdfbf66 68%,transparent 78%);filter:blur(4px)}
+@media(max-width:700px){.cover-sun{left:calc(50% + 126px);width:64px;box-shadow:0 0 19px 5px #f4cf854d,0 0 43px 16px #f4cf8526}}
+@media(max-width:370px){.cover-sun{left:calc(50% + 113px);width:52px}.cover-date{font-size:7px;letter-spacing:.7px;gap:10px}}
