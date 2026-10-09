@@ -6,6 +6,8 @@ Invitación digital para los 2 años de Aldo Aldair. Copia independiente de `94w
 
 ## Diseño
 
+Acabados: textura de papel muy suave, luz cálida en la portada, separadores botánicos dorados, sello de la expedición y destellos breves en los botones. Al abrir una fotografía aparece un marco de álbum con leyenda manuscrita en Caveat, alojada localmente. Las hojas de acacia y palmera se balancean solo cuando están a la vista; se respeta la preferencia de reducir movimiento.
+
 Ilustración original en acuarela de la sabana africana, fotografías de elefantes, jirafas y un león; marfil, verde bosque, oliva y oro mate. Cormorant Garamond y DM Sans, alojadas localmente. Sin iconos SVG ni dependencias de JavaScript. Los animales son propios de la temática de sabana africana; no se presentan como especies endémicas de México.
 
 Cuenta regresiva con zona horaria explícita; descarga de calendario `.ics`; ubicación en Google Maps; galería ampliable con teclado y Escape; compartir; confirmación por WhatsApp con ambos anfitriones; animaciones que respetan movimiento reducido. La invitación permanece legible sin JavaScript. Los efectos de apertura, personajes y música de la temática anterior se retiraron del diseño nuevo.

@@ -55,3 +55,35 @@ main>section,.cover-frame,.footer{position:relative;isolation:isolate;overflow:c
 .venue-card{position:relative;z-index:2}
 @media(max-width:700px){.safari-foliage{width:122px;opacity:.38}.foliage-palm{width:150px;opacity:.29}.foliage-left{left:-45px;top:14px}.foliage-right{right:-48px;top:12px}.foliage-bottom-right{right:-48px;bottom:14px}.foliage-bottom-left{left:-48px;bottom:12px}.foliage-middle-left{left:-53px;top:52%;opacity:.21}.cover-frame .safari-foliage{top:24px;opacity:.2}.cover-frame .foliage-right{top:173px}.venue-section .foliage-bottom-right{bottom:15px}}
 .foliage-palm{aspect-ratio:600/640}
+
+/* Paper, sunset light and the explorer's keepsake album. */
+@font-face{font-family:'Caveat';font-style:normal;font-weight:400 700;font-display:swap;src:url('assets/safari/caveat.ttf') format('truetype')}
+body:before{content:'';position:fixed;inset:0;z-index:40;pointer-events:none;background:url('assets/safari/papel-algodon.png') repeat;opacity:.3}
+.cover-sunset{position:absolute;z-index:0;pointer-events:none;width:80%;height:48%;left:10%;bottom:0;background:radial-gradient(ellipse at 65% 62%,#dca34d50 0%,#efcd8130 32%,#f7f3e900 70%)}
+.cover-edition{font-size:8px;letter-spacing:2.2px;color:#786344}
+.portrait-stamp{flex-direction:column;gap:4px;border-style:double;border-width:3px;outline:1px solid #ad865155;outline-offset:4px;background:#f7f3e9f5;box-shadow:0 3px 14px #293a3010;line-height:1.2}
+.portrait-stamp span{font-size:7px;letter-spacing:1px}.portrait-stamp strong{font:600 18px/1.2 var(--serif);letter-spacing:1px;color:var(--forest)}
+.botanical-divider{display:flex;align-items:center;justify-content:center;gap:14px;width:min(330px,75%);height:60px;margin:0 auto;pointer-events:none}
+.botanical-divider span{height:1px;flex:1;background:linear-gradient(90deg,transparent,#ad865170)}
+.botanical-divider span:last-child{background:linear-gradient(90deg,#ad865170,transparent)}
+.botanical-divider img{width:70px;height:auto;opacity:.55;transform:rotate(17deg);mask-image:radial-gradient(ellipse,#000 30%,transparent 85%)}
+.button{position:relative;overflow:hidden;isolation:isolate;transition:background .25s,color .25s,transform .25s,box-shadow .25s,border-color .25s}
+.button:after{content:'';position:absolute;inset:0 auto 0 0;width:45%;pointer-events:none;background:linear-gradient(90deg,transparent,#d5b88040,transparent);transform:translateX(-170%) skewX(-20deg)}
+.button:hover,.button:focus-visible{border-color:#b89b66;box-shadow:0 5px 18px #ad86511c}
+.button:active{transform:translateY(1px);box-shadow:inset 0 0 0 1px #c5a36b80}
+.button:focus-visible:after,.button:active:after{animation:golden-glint .8s ease-out}
+@media(hover:hover){.button:hover:after{animation:golden-glint .8s ease-out}}
+@keyframes golden-glint{from{transform:translateX(-170%) skewX(-20deg)}to{transform:translateX(360%) skewX(-20deg)}}
+.photo-dialog{border:0;background:transparent;padding:8px;width:fit-content;max-width:min(650px,94vw);max-height:94dvh;overflow:auto}
+.photo-dialog .dialog-close{position:sticky;top:0;z-index:2;background:var(--paper);border:1px solid var(--line);border-radius:2px;padding:5px 13px;margin-bottom:10px;box-shadow:0 3px 15px #172a2215}
+.album-page{padding:23px 24px 18px;border:1px solid #bba378;background:var(--paper) url('assets/safari/papel-algodon.png') repeat;box-shadow:inset 0 0 0 7px #eee6d580,0 12px 40px #172a2235}
+.photo-dialog .album-heading{font:500 8px/1.7 var(--sans);letter-spacing:2px;color:var(--olive);margin:0 0 17px;text-align:center}
+.album-photo{position:relative;padding:9px;background:#fffdf7;box-shadow:0 4px 18px #293a301a;transform:rotate(-1deg)}
+.album-photo:before,.album-photo:after{content:'';position:absolute;z-index:1;width:46px;height:19px;top:-6px;background:#d7c7a575;border:1px solid #d7c7a540;transform:rotate(-28deg);pointer-events:none}
+.album-photo:before{left:-13px}.album-photo:after{left:auto;right:-13px;transform:rotate(28deg)}
+.photo-dialog .album-photo img{width:auto;height:auto;max-width:100%;max-height:min(60dvh,540px);object-fit:contain;margin:auto}
+.photo-dialog .album-caption{font:400 35px/1.15 'Caveat',cursive;color:var(--forest);margin:20px 0 11px;text-align:center;transform:rotate(-2deg);max-width:510px;overflow-wrap:anywhere}
+.photo-dialog .album-note{font:500 7px/1.8 var(--sans);letter-spacing:1.8px;color:var(--gold);margin:0;text-align:center}
+@media(max-width:700px){.botanical-divider{height:44px;width:64%;gap:10px}.botanical-divider img{width:55px}.cover-sunset{width:100%;left:0;height:34%}.portrait-stamp{gap:3px}.portrait-stamp span{font-size:6px;letter-spacing:.7px}.portrait-stamp strong{font-size:16px}.album-page{padding:18px 18px 15px}.photo-dialog .album-heading{font-size:7px;letter-spacing:1.1px}.photo-dialog .album-caption{font-size:31px}.photo-dialog .album-note{font-size:6px;letter-spacing:1.2px}}
+@media(prefers-reduced-motion:reduce){.button:after{animation:none!important}.album-photo,.photo-dialog .album-caption{transform:none}}
+@media(max-width:700px){.portrait-stamp strong{font-size:14px;letter-spacing:.5px;white-space:nowrap}}
