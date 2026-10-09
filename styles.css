@@ -37,3 +37,21 @@
 @keyframes acacia-breeze{from{transform:rotate(-6deg) translate3d(0,0,0)}to{transform:rotate(7deg) translate3d(5px,-8px,0)}}
 @media(max-width:700px){.safari-foliage{width:108px;height:108px;opacity:.4}.foliage-left{left:-42px;top:4px}.foliage-right{right:-40px;top:0}.js-motion .story-portrait.reveal,.js-motion .story-copy.reveal{transform:translate3d(0,26px,0)}.js-motion .story-portrait.reveal.visible,.js-motion .story-copy.reveal.visible{transform:none}}
 @media(prefers-reduced-motion:reduce){.js-motion .reveal,.js-motion .story-portrait.reveal,.js-motion .story-copy.reveal{opacity:1;transform:none;transition:none}.js-motion .safari-foliage img{animation:none}}
+
+/* Botanical accents throughout the invitation, with soft translucent edges. */
+main>section,.cover-frame,.footer{position:relative;isolation:isolate;overflow:clip}
+.safari-foliage{width:190px;height:auto;aspect-ratio:1.5;opacity:.44;filter:blur(.35px);mask-image:radial-gradient(ellipse at center,#000 40%,#0009 68%,transparent 95%)}
+.foliage-palm{width:235px;opacity:.34;filter:blur(.65px)}
+.foliage-left{left:-52px;top:18px;transform:rotate(18deg)}
+.foliage-right{right:-50px;top:18px;transform:scaleX(-1) rotate(16deg)}
+.foliage-bottom-right{right:-55px;bottom:22px;top:auto;transform:rotate(196deg)}
+.foliage-bottom-left{left:-58px;bottom:15px;top:auto;transform:scaleX(-1) rotate(194deg)}
+.foliage-middle-left{left:-75px;top:52%;transform:rotate(-35deg);opacity:.24}
+.foliage-bottom-right img,.foliage-bottom-left img{animation-delay:-4s!important;animation-duration:9s!important}
+.cover-frame .safari-foliage{z-index:3;opacity:.23;top:24px}
+.cover-frame .foliage-right{top:172px}
+.countdown-section .safari-foliage,.footer .safari-foliage{opacity:.25;filter:brightness(1.8) blur(.5px)}
+.venue-section .safari-foliage{z-index:1;opacity:.25}
+.venue-card{position:relative;z-index:2}
+@media(max-width:700px){.safari-foliage{width:122px;opacity:.38}.foliage-palm{width:150px;opacity:.29}.foliage-left{left:-45px;top:14px}.foliage-right{right:-48px;top:12px}.foliage-bottom-right{right:-48px;bottom:14px}.foliage-bottom-left{left:-48px;bottom:12px}.foliage-middle-left{left:-53px;top:52%;opacity:.21}.cover-frame .safari-foliage{top:24px;opacity:.2}.cover-frame .foliage-right{top:173px}.venue-section .foliage-bottom-right{bottom:15px}}
+.foliage-palm{aspect-ratio:600/640}
