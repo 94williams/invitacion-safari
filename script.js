@@ -132,9 +132,21 @@ function observeReveal() {
   if (reduceMotion || !("IntersectionObserver" in window)) return;
   const observer = new IntersectionObserver((entries) => entries.forEach((entry) => {
     if (entry.isIntersecting) { entry.target.classList.add("visible"); observer.unobserve(entry.target); }
-  }), { threshold: 0.08 });
+  }), { threshold: 0.08, rootMargin: "0px 0px -35px 0px" });
+  document.querySelectorAll(".reveal").forEach((element) => {
+    const siblings = [...element.parentElement.children].filter((child) => child.classList.contains("reveal"));
+    element.style.setProperty("--reveal-delay", `${Math.min(siblings.indexOf(element), 3) * 90}ms`);
+    observer.observe(element);
+  });
   document.body.classList.add("js-motion");
-  document.querySelectorAll(".reveal").forEach((element) => observer.observe(element));
+  document.addEventListener("focusin", (event) => {
+    const element = event.target.closest(".reveal");
+    if (element) { element.classList.add("visible"); observer.unobserve(element); }
+  });
+  const foliageObserver = new IntersectionObserver((entries) => entries.forEach((entry) => {
+    entry.target.classList.toggle("in-view", entry.isIntersecting);
+  }));
+  document.querySelectorAll(".safari-foliage").forEach((element) => foliageObserver.observe(element));
 }
 
 function updateScroll() {

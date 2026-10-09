@@ -20,3 +20,20 @@
 @media(max-width:700px){.birthday-seal{width:48px;height:48px;right:12px;bottom:12px;outline-offset:-4px}.birthday-seal strong{font-size:25px}.birthday-seal span{font-size:5px;letter-spacing:1px}}
 @media(max-width:370px){.cover-frame{min-height:710px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}.js-motion .reveal{opacity:1;transform:none}}
+
+/* A gentle rhythm: editorial reveals and acacia branches in the breeze. */
+.js-motion .reveal{transform:translate3d(0,32px,0);transition:opacity .9s ease,transform 1s cubic-bezier(.2,.65,.2,1);transition-delay:var(--reveal-delay,0ms)}
+.js-motion .story-portrait.reveal{transform:translate3d(-28px,18px,0)}
+.js-motion .story-copy.reveal{transform:translate3d(28px,18px,0)}
+.js-motion .reveal.visible{opacity:1;transform:none}
+.story,.details-section,.rsvp-section{position:relative;isolation:isolate;overflow:clip}
+.safari-foliage{position:absolute;width:180px;height:180px;pointer-events:none;user-select:none;z-index:-1;opacity:.52}
+.safari-foliage img{width:100%;height:auto;transform-origin:15% 90%}
+.foliage-left{left:-54px;top:12px;transform:rotate(24deg)}
+.foliage-right{right:-48px;top:5px;transform:scaleX(-1) rotate(12deg)}
+.js-motion .safari-foliage img{animation:acacia-breeze 7s ease-in-out infinite alternate;animation-play-state:paused}
+.js-motion .safari-foliage.in-view img{animation-play-state:running}
+.foliage-right img{animation-delay:-3s!important}
+@keyframes acacia-breeze{from{transform:rotate(-6deg) translate3d(0,0,0)}to{transform:rotate(7deg) translate3d(5px,-8px,0)}}
+@media(max-width:700px){.safari-foliage{width:108px;height:108px;opacity:.4}.foliage-left{left:-42px;top:4px}.foliage-right{right:-40px;top:0}.js-motion .story-portrait.reveal,.js-motion .story-copy.reveal{transform:translate3d(0,26px,0)}.js-motion .story-portrait.reveal.visible,.js-motion .story-copy.reveal.visible{transform:none}}
+@media(prefers-reduced-motion:reduce){.js-motion .reveal,.js-motion .story-portrait.reveal,.js-motion .story-copy.reveal{opacity:1;transform:none;transition:none}.js-motion .safari-foliage img{animation:none}}
