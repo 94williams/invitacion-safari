@@ -87,3 +87,8 @@ body:before{content:'';position:fixed;inset:0;z-index:40;pointer-events:none;bac
 @media(max-width:700px){.botanical-divider{height:44px;width:64%;gap:10px}.botanical-divider img{width:55px}.cover-sunset{width:100%;left:0;height:34%}.portrait-stamp{gap:3px}.portrait-stamp span{font-size:6px;letter-spacing:.7px}.portrait-stamp strong{font-size:16px}.album-page{padding:18px 18px 15px}.photo-dialog .album-heading{font-size:7px;letter-spacing:1.1px}.photo-dialog .album-caption{font-size:31px}.photo-dialog .album-note{font-size:6px;letter-spacing:1.2px}}
 @media(prefers-reduced-motion:reduce){.button:after{animation:none!important}.album-photo,.photo-dialog .album-caption{transform:none}}
 @media(max-width:700px){.portrait-stamp strong{font-size:14px;letter-spacing:.5px;white-space:nowrap}}
+/* One continuous watercolor sky behind the title and the savanna. */
+.cover-frame{background:linear-gradient(180deg,#f1e8d5 0%,#efe1c3 56%,#ead4a8 100%)}
+.cover-copy:before{background:none}
+.cover-art{mask-image:linear-gradient(180deg,transparent 0%,#0002 8%,#0008 20%,#000 36%),linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-composite:intersect;-webkit-mask-composite:source-in;opacity:.96}
+@media(max-width:700px){.cover-art{mask-image:linear-gradient(180deg,transparent 0%,#0002 8%,#0008 20%,#000 36%);mask-composite:add;-webkit-mask-composite:source-over}.cover-copy:before{background:none}}
