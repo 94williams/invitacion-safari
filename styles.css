@@ -92,3 +92,7 @@ body:before{content:'';position:fixed;inset:0;z-index:40;pointer-events:none;bac
 .cover-copy:before{background:none}
 .cover-art{mask-image:linear-gradient(180deg,transparent 0%,#0002 8%,#0008 20%,#000 36%),linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-composite:intersect;-webkit-mask-composite:source-in;opacity:.96}
 @media(max-width:700px){.cover-art{mask-image:linear-gradient(180deg,transparent 0%,#0002 8%,#0008 20%,#000 36%);mask-composite:add;-webkit-mask-composite:source-over}.cover-copy:before{background:none}}
+/* A quiet sunrise, distinct from the watercolor sky. */
+.cover-sunset{z-index:1}
+.cover-sunset:before{content:'';position:absolute;width:clamp(88px,10vw,132px);aspect-ratio:1;left:72%;bottom:60%;transform:translateX(-50%);border-radius:50%;background:radial-gradient(circle at 45% 40%,#fff4c7d9 0%,#f3cf89bf 55%,#d9a35680 100%);border:1px solid #d1a5665c;box-shadow:0 0 34px 14px #efd09355,0 0 80px 34px #efd09326;opacity:.7;mask-image:linear-gradient(#000 60%,#000b 82%,#0003);pointer-events:none}
+@media(max-width:700px){.cover-sunset:before{width:88px;left:76%;bottom:60%;opacity:.66}}
