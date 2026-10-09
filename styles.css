@@ -103,3 +103,30 @@ body:before{content:'';position:fixed;inset:0;z-index:40;pointer-events:none;bac
 .cover-sun:after{content:'';position:absolute;inset:-12%;border-radius:50%;background:linear-gradient(172deg,transparent 38%,#f1e3c57a 43%,transparent 49%,transparent 62%,#efdfbf66 68%,transparent 78%);filter:blur(4px)}
 @media(max-width:700px){.cover-sun{left:calc(50% + 126px);width:64px;box-shadow:0 0 19px 5px #f4cf854d,0 0 43px 16px #f4cf8526}}
 @media(max-width:370px){.cover-sun{left:calc(50% + 113px);width:52px}.cover-date{font-size:7px;letter-spacing:.7px;gap:10px}}
+/* Atmospheric depth and the final page of the explorer's diary. */
+.cover-sunset:after{content:'';position:absolute;left:3%;right:3%;bottom:58%;height:27%;background:radial-gradient(ellipse at 50% 60%,#f9edcf70,transparent 68%);filter:blur(10px);pointer-events:none}
+.cover-sun{animation:sunlight-breath 12s ease-in-out infinite;animation-play-state:paused}
+.cover-sun.in-view{animation-play-state:running}
+@keyframes sunlight-breath{0%,100%{opacity:.78;filter:blur(.6px) brightness(1)}50%{opacity:.9;filter:blur(.9px) brightness(1.05)}}
+.safari-foliage.foliage-acacia{filter:blur(.15px);opacity:.42}
+.safari-foliage.foliage-palm{filter:blur(1.8px);opacity:.27}
+.safari-foliage.foliage-middle-left{filter:blur(2.8px);opacity:.18}
+.cover-frame .foliage-acacia{opacity:.24}.cover-frame .foliage-palm{opacity:.18;filter:blur(2px)}
+.countdown-section .safari-foliage,.footer .safari-foliage{filter:brightness(1.8) blur(.6px);opacity:.24}
+.story{background:linear-gradient(180deg,#f7f3e9,#f0ebdc 88%,#e7e5d6)}
+.countdown-section{background:linear-gradient(180deg,#4b5841,#253c30 24%,#253c30 75%,#49563f)}
+.itinerary{background:linear-gradient(180deg,#e8e7d9,var(--paper) 20%,var(--paper) 82%,#eee6d6)}
+.memories{background:linear-gradient(180deg,#f0e8d7,var(--paper) 22%,var(--paper) 82%,#eeeadc)}
+.details-section{background:linear-gradient(180deg,#eeeadc,#e5e5d6 55%,#f1eee2)}
+.rsvp-section{background:linear-gradient(180deg,#f1eee2,var(--paper) 30%,#ece9da)}
+.memory-note{display:block;font:400 20px/1.2 'Caveat',cursive;color:var(--olive);margin-top:8px;letter-spacing:0}
+.photo-dialog .album-story{font:400 12px/1.65 var(--sans);color:var(--olive);max-width:360px;margin:0 auto 16px;text-align:center}
+.footer{background:linear-gradient(180deg,#49563f,#253c30 30%,#20362b)}
+.closing-botanical{display:flex;align-items:center;justify-content:center;gap:10px;margin:28px auto 18px;pointer-events:none}
+.closing-botanical img{width:95px;height:auto;filter:brightness(1.65);opacity:.55;mask-image:radial-gradient(ellipse,#000 35%,transparent 80%);transform:rotate(15deg)}
+.closing-botanical img:last-child{transform:scaleX(-1) rotate(15deg)}
+.closing-botanical span{font:500 9px/1.5 var(--sans);letter-spacing:2px;color:#d6c4a1;white-space:nowrap}
+.footer .footer-signature{font:400 clamp(32px,4vw,47px)/1.05 'Caveat',cursive;color:#ece3cd;margin:0 auto 18px;max-width:580px}
+.footer .closing-note{font-size:10px;letter-spacing:.5px;color:#c7cfb8;margin-bottom:35px}
+@media(max-width:700px){.memory-note{font-size:18px}.closing-botanical img{width:75px}.cover-sunset:after{bottom:54%;height:33%}.safari-foliage.foliage-acacia{opacity:.33}.safari-foliage.foliage-palm{opacity:.23}.cover-frame .foliage-acacia{opacity:.2}.cover-frame .foliage-palm{opacity:.17}.safari-foliage.foliage-middle-left{opacity:.15}.footer .safari-foliage,.countdown-section .safari-foliage{opacity:.23}}
+@media(prefers-reduced-motion:reduce){.cover-sun{animation:none;opacity:.82;filter:blur(.6px)}}

@@ -146,7 +146,7 @@ function observeReveal() {
   const foliageObserver = new IntersectionObserver((entries) => entries.forEach((entry) => {
     entry.target.classList.toggle("in-view", entry.isIntersecting);
   }));
-  document.querySelectorAll(".safari-foliage").forEach((element) => foliageObserver.observe(element));
+  document.querySelectorAll(".safari-foliage, .cover-sun").forEach((element) => foliageObserver.observe(element));
 }
 
 function updateScroll() {
@@ -170,6 +170,7 @@ document.querySelectorAll(".memory").forEach((button) => {
     const photo = button.querySelector("img");
     $("photoLarge").src = photo.src; $("photoLarge").alt = photo.alt;
     $("photoCaption").textContent = button.dataset.caption;
+    $("photoStory").textContent = button.dataset.story || "";
     dialog.showModal(); document.body.classList.add("modal-open");
   });
 });
